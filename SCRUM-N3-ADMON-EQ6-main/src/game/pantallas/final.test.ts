@@ -28,3 +28,13 @@ test('en Scrum el final ofrece jugar PMBOK', () => {
   expect(html).toContain('<b>Maestro Scrum</b>');
   expect(html).toContain('/jugar/?ruta=pmbok">Jugar PMBOK</a>');
 });
+
+test('el cierre muestra un trofeo y seis sprites originales en lugar de la lámina de poses', () => {
+  const html = final({ ...nuevaPartida(), pantalla: 'fin', puntos: 120 });
+  expect(html).toContain('Trofeo de misión completada');
+  expect(html).toContain('Ruta Scrum completada');
+  for (const clave of ['beto', 'riqui', 'lili', 'inge', 'tono', 'pau']) {
+    expect(html).toContain(`/img/px/${clave}.png`);
+  }
+  expect(html).not.toContain('group.webp');
+});
