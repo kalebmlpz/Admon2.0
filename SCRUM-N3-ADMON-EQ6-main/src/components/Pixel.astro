@@ -1,0 +1,29 @@
+---
+/** Icono pixel art en SVG; toma el color de `currentColor`. */
+import { formas, type TipoPixel } from '@/lib/pixel';
+
+interface Props {
+  tipo: TipoPixel;
+  /** Alto en px; el ancho se deriva de la rejilla. */
+  alto?: number;
+  class?: string;
+  /** Texto accesible; sin él el icono es decorativo. */
+  label?: string;
+}
+
+const { tipo, alto = 16, class: clase, label } = Astro.props;
+const [cols, filas, rects] = formas[tipo];
+const a11y = label ? ({ role: 'img', 'aria-label': label } as const) : ({ 'aria-hidden': 'true' } as const);
+---
+
+<svg
+  class={clase}
+  viewBox={`0 0 ${cols} ${filas}`}
+  width={Math.round((alto * cols) / filas)}
+  height={alto}
+  shape-rendering="crispEdges"
+  fill="currentColor"
+  {...a11y}
+>
+  {rects.map(([x, y, w, h]) => <rect x={x} y={y} width={w} height={h} />)}
+</svg>

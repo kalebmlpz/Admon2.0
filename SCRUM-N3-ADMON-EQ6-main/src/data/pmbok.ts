@@ -1,0 +1,133 @@
+import type { Escenario } from '@/data/tipos';
+
+/** Ruta PMBOK: conceptos generales válidos para la 6.ª y la 7.ª edición. */
+export const escenariosPmbok: Escenario[] = [
+  {
+    titulo: 'Exterior de la escuela',
+    tema: 'Fundamentos de PMBOK',
+    fondo: 'b0',
+    guia: 'riqui',
+    intro: [
+      { personaje: 'riqui', texto: 'El Inge dice que además de Scrum existe otra forma de dirigir proyectos: la guía PMBOK.' },
+      { personaje: 'beto', texto: '¿PMBOK? Suena a robot.' },
+      { personaje: 'riqui', texto: 'Es una guía de buenas prácticas. A ver si la entiendes.' },
+    ],
+    retos: [
+      {
+        tipo: 'mc',
+        pregunta: '¿Qué es un proyecto?',
+        correcta: 'Un esfuerzo temporal para crear un producto, servicio o resultado único',
+        incorrectas: ['Un trabajo que se repite igual todos los días', 'Cualquier tarea sin fecha de fin'],
+        explicacion: 'Un proyecto tiene inicio y fin, y su resultado es único. Si se repite igual, es una operación.',
+      },
+      {
+        tipo: 'mc',
+        pregunta: '¿Qué es la guía PMBOK?',
+        correcta: 'Un conjunto de buenas prácticas para dirigir proyectos, publicado por el PMI',
+        incorrectas: ['Un marco ágil basado en Sprints', 'Un programa para hacer cronogramas'],
+        explicacion: 'La publica el Project Management Institute y sirve para proyectos predictivos, ágiles o híbridos.',
+      },
+      {
+        tipo: 'mc',
+        pregunta: 'La triple restricción equilibra:',
+        correcta: 'Alcance, tiempo y costo',
+        incorrectas: ['Vidas, puntos y racha', 'Diseño, código y pruebas'],
+        explicacion: 'Si el alcance crece, normalmente suben el tiempo o el costo; la calidad depende de ese equilibrio.',
+      },
+      {
+        tipo: 'rel',
+        pregunta: 'Une cada concepto con su definición:',
+        pares: [
+          ['Proyecto', 'Temporal y con un resultado único'],
+          ['Operación', 'Continua y repetitiva'],
+          ['Director del proyecto', 'Lidera al equipo para lograr los objetivos'],
+        ],
+        explicacion: 'El director del proyecto es responsable de que el proyecto cumpla sus objetivos.',
+      },
+    ],
+  },
+  {
+    titulo: 'Salón de clases',
+    tema: 'Ciclo de vida y procesos',
+    fondo: 'b1',
+    guia: 'pau',
+    intro: [
+      { personaje: 'pau', texto: 'Antes de decorar algo, hay que saber en qué etapa va el proyecto.' },
+      { personaje: 'lili', texto: '¿Como el Sprint?' },
+      { personaje: 'pau', texto: 'Parecido, pero en PMBOK hablamos de ciclos de vida y grupos de procesos.' },
+    ],
+    retos: [
+      {
+        tipo: 'mc',
+        pregunta: '¿Qué ciclo de vida define alcance, tiempo y costo desde el inicio?',
+        correcta: 'Predictivo (en cascada)',
+        incorrectas: ['Ágil', 'Improvisado'],
+        explicacion: 'En el enfoque predictivo se planea casi todo al principio y los cambios se controlan formalmente.',
+      },
+      {
+        tipo: 'mc',
+        pregunta: 'Un enfoque híbrido:',
+        correcta: 'Combina prácticas predictivas y ágiles',
+        incorrectas: ['Solo usa Sprints', 'Trabaja sin ningún plan'],
+        explicacion: 'Muchos equipos planean la fase general de forma predictiva y construyen por iteraciones.',
+      },
+      {
+        tipo: 'mc',
+        pregunta: '¿Qué grupo de procesos compara el avance con el plan y corrige desviaciones?',
+        correcta: 'Monitoreo y control',
+        incorrectas: ['Inicio', 'Cierre'],
+        explicacion: 'Ocurre durante todo el proyecto, no solo al final.',
+      },
+      {
+        tipo: 'ord',
+        pregunta: 'Ordena los grupos de procesos del PMBOK:',
+        pasos: ['Inicio', 'Planificación', 'Ejecución', 'Monitoreo y control', 'Cierre'],
+        explicacion: 'Monitoreo y control acompaña a todos los demás; aquí se ordena según cuándo toma protagonismo cada grupo.',
+      },
+    ],
+  },
+  {
+    titulo: 'Cancha de la escuela',
+    tema: 'Gestión del proyecto',
+    fondo: 'b2',
+    guia: 'beto',
+    intro: [
+      { personaje: 'beto', texto: '¡Ahora yo soy el guía! Ya leí todo sobre PMBOK… bueno, casi todo.' },
+      { personaje: 'tono', texto: 'Entonces explícanos los documentos del proyecto.' },
+      { personaje: 'beto', texto: 'Fácil. Bueno… vamos a resolverlo juntos.' },
+    ],
+    retos: [
+      {
+        tipo: 'mc',
+        pregunta: '¿Qué documento autoriza formalmente el inicio del proyecto?',
+        correcta: 'El acta de constitución del proyecto',
+        incorrectas: ['El Product Backlog', 'El registro de riesgos'],
+        explicacion: 'El acta da autoridad al director del proyecto y fija objetivos de alto nivel.',
+      },
+      {
+        tipo: 'mc',
+        pregunta: 'La EDT (WBS) sirve para:',
+        correcta: 'Dividir el alcance en entregables y paquetes de trabajo más pequeños',
+        incorrectas: ['Calificar a cada integrante', 'Medir la velocidad del Sprint'],
+        explicacion: 'Descomponer el trabajo facilita estimar, asignar y controlar.',
+      },
+      {
+        tipo: 'mc',
+        pregunta: 'Los interesados (stakeholders) son:',
+        correcta: 'Personas o grupos que afectan o se ven afectados por el proyecto',
+        incorrectas: ['Solo el cliente que paga', 'Solo quienes programan'],
+        explicacion: 'Alumnos, profes y directivos pueden ser interesados del videojuego.',
+      },
+      {
+        tipo: 'rel',
+        pregunta: 'Une cada documento con su propósito:',
+        pares: [
+          ['Acta de constitución', 'Autoriza el proyecto'],
+          ['EDT (WBS)', 'Descompone el alcance'],
+          ['Registro de riesgos', 'Anota amenazas y sus respuestas'],
+        ],
+        explicacion: 'Cada documento ayuda a planear y controlar una parte del proyecto.',
+      },
+    ],
+  },
+];
