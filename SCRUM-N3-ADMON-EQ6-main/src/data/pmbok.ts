@@ -15,6 +15,7 @@ export const escenariosPmbok: Escenario[] = [
     retos: [
       {
         tipo: 'mc',
+        ilustracion: 'proyecto',
         pregunta: '¿Qué es un proyecto?',
         correcta: 'Un esfuerzo temporal para crear un producto, servicio o resultado único',
         incorrectas: ['Un trabajo que se repite igual todos los días', 'Cualquier tarea sin fecha de fin'],
@@ -22,6 +23,7 @@ export const escenariosPmbok: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'guia',
         pregunta: '¿Qué es la guía PMBOK?',
         correcta: 'Un conjunto de buenas prácticas para dirigir proyectos, publicado por el PMI',
         incorrectas: ['Un marco ágil basado en Sprints', 'Un programa para hacer cronogramas'],
@@ -29,6 +31,7 @@ export const escenariosPmbok: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'triangulo',
         pregunta: 'La triple restricción equilibra:',
         correcta: 'Alcance, tiempo y costo',
         incorrectas: ['Vidas, puntos y racha', 'Diseño, código y pruebas'],
@@ -36,6 +39,7 @@ export const escenariosPmbok: Escenario[] = [
       },
       {
         tipo: 'rel',
+        ilustracion: 'conceptos',
         pregunta: 'Une cada concepto con su definición:',
         pares: [
           ['Proyecto', 'Temporal y con un resultado único'],
@@ -59,6 +63,7 @@ export const escenariosPmbok: Escenario[] = [
     retos: [
       {
         tipo: 'mc',
+        ilustracion: 'predictivo',
         pregunta: '¿Qué ciclo de vida define alcance, tiempo y costo desde el inicio?',
         correcta: 'Predictivo (en cascada)',
         incorrectas: ['Ágil', 'Improvisado'],
@@ -66,6 +71,7 @@ export const escenariosPmbok: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'hibrido',
         pregunta: 'Un enfoque híbrido:',
         correcta: 'Combina prácticas predictivas y ágiles',
         incorrectas: ['Solo usa Sprints', 'Trabaja sin ningún plan'],
@@ -73,6 +79,7 @@ export const escenariosPmbok: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'control',
         pregunta: '¿Qué grupo de procesos compara el avance con el plan y corrige desviaciones?',
         correcta: 'Monitoreo y control',
         incorrectas: ['Inicio', 'Cierre'],
@@ -80,6 +87,7 @@ export const escenariosPmbok: Escenario[] = [
       },
       {
         tipo: 'ord',
+        ilustracion: 'procesos',
         pregunta: 'Ordena los grupos de procesos del PMBOK:',
         pasos: ['Inicio', 'Planificación', 'Ejecución', 'Monitoreo y control', 'Cierre'],
         explicacion: 'Monitoreo y control acompaña a todos los demás; aquí se ordena según cuándo toma protagonismo cada grupo.',
@@ -99,6 +107,7 @@ export const escenariosPmbok: Escenario[] = [
     retos: [
       {
         tipo: 'mc',
+        ilustracion: 'acta',
         pregunta: '¿Qué documento autoriza formalmente el inicio del proyecto?',
         correcta: 'El acta de constitución del proyecto',
         incorrectas: ['El Product Backlog', 'El registro de riesgos'],
@@ -106,6 +115,7 @@ export const escenariosPmbok: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'edt',
         pregunta: 'La EDT (WBS) sirve para:',
         correcta: 'Dividir el alcance en entregables y paquetes de trabajo más pequeños',
         incorrectas: ['Calificar a cada integrante', 'Medir la velocidad del Sprint'],
@@ -113,6 +123,7 @@ export const escenariosPmbok: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'interesados',
         pregunta: 'Los interesados (stakeholders) son:',
         correcta: 'Personas o grupos que afectan o se ven afectados por el proyecto',
         incorrectas: ['Solo el cliente que paga', 'Solo quienes programan'],
@@ -120,6 +131,7 @@ export const escenariosPmbok: Escenario[] = [
       },
       {
         tipo: 'rel',
+        ilustracion: 'documentos',
         pregunta: 'Une cada documento con su propósito:',
         pares: [
           ['Acta de constitución', 'Autoriza el proyecto'],

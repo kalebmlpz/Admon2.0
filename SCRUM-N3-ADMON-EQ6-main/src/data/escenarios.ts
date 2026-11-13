@@ -14,6 +14,7 @@ export const escenarios: Escenario[] = [
     retos: [
       {
         tipo: 'mc',
+        ilustracion: 'equipo',
         pregunta: '¿Qué es Scrum?',
         correcta: 'Un marco de trabajo para resolver problemas complejos con colaboración y entregas frecuentes',
         incorrectas: ['Una lista de pasos que garantiza resultados', 'Un lenguaje de programación'],
@@ -21,6 +22,7 @@ export const escenarios: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'sprints',
         pregunta: '¿Cómo se llaman los periodos de trabajo en Scrum?',
         correcta: 'Sprints',
         incorrectas: ['Capítulos', 'Maratones'],
@@ -28,6 +30,7 @@ export const escenarios: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'evidencia',
         pregunta: 'Trabajar de forma empírica significa:',
         correcta: 'Decidir con base en lo observado',
         incorrectas: ['Decidir por intuición del más rápido', 'Seguir el plan sin cambios'],
@@ -35,6 +38,7 @@ export const escenarios: Escenario[] = [
       },
       {
         tipo: 'ord',
+        ilustracion: 'ciclo',
         pregunta: 'Ordena el ciclo de un Sprint, del primero al último:',
         pasos: ['Sprint Planning', 'Trabajo diario con Daily Scrum', 'Sprint Review', 'Retrospectiva'],
         explicacion: 'Se planea, se trabaja inspeccionando cada día, se revisa el incremento con los interesados y al final se mejora la colaboración.',
@@ -54,6 +58,7 @@ export const escenarios: Escenario[] = [
     retos: [
       {
         tipo: 'mc',
+        ilustracion: 'backlog',
         pregunta: '¿Quién maximiza el valor y ordena el Product Backlog?',
         correcta: 'El Product Owner',
         incorrectas: ['El Scrum Master', 'El Equipo de Desarrollo'],
@@ -61,6 +66,7 @@ export const escenarios: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'impedimentos',
         pregunta: '¿Qué hace el Scrum Master?',
         correcta: 'Enseña Scrum y ayuda a eliminar impedimentos',
         incorrectas: ['Decide cómo programar cada tarea', 'Ordena el Product Backlog'],
@@ -68,6 +74,7 @@ export const escenarios: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'desarrollo',
         pregunta: 'El Equipo de Desarrollo es:',
         correcta: 'Autoorganizado y multifuncional',
         incorrectas: ['Dirigido por el Product Owner', 'Solo de programadores'],
@@ -75,6 +82,7 @@ export const escenarios: Escenario[] = [
       },
       {
         tipo: 'rel',
+        ilustracion: 'roles',
         pregunta: 'Une cada rol con su responsabilidad:',
         pares: [
           ['Product Owner', 'Ordena el Product Backlog'],
@@ -98,6 +106,7 @@ export const escenarios: Escenario[] = [
     retos: [
       {
         tipo: 'mc',
+        ilustracion: 'planning',
         pregunta: 'En la Sprint Planning el equipo:',
         correcta: 'Define la meta y selecciona el trabajo del Sprint',
         incorrectas: ['Presenta el producto final', 'Revisa el desempeño de cada persona'],
@@ -105,6 +114,7 @@ export const escenarios: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'daily',
         pregunta: 'La Daily Scrum sirve para:',
         correcta: 'Compartir avances y bloqueos y ajustar el plan',
         incorrectas: ['Evaluar a cada integrante', 'Entregar el producto'],
@@ -112,6 +122,7 @@ export const escenarios: Escenario[] = [
       },
       {
         tipo: 'mc',
+        ilustracion: 'review',
         pregunta: 'En la Sprint Review:',
         correcta: 'El equipo y los interesados examinan el incremento',
         incorrectas: ['Se asignan calificaciones', 'Se elige al Scrum Master'],
@@ -119,6 +130,7 @@ export const escenarios: Escenario[] = [
       },
       {
         tipo: 'rel',
+        ilustracion: 'eventos',
         pregunta: 'Une cada evento con su propósito:',
         pares: [
           ['Daily Scrum', 'Compartir avances y bloqueos'],

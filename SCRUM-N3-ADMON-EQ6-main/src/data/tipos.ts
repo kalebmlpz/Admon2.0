@@ -10,7 +10,17 @@ export interface Personaje {
   sprites: { base: ClaveSprite; feliz: ClaveSprite; triste: ClaveSprite };
 }
 
+export type ClaveIlustracion =
+  | 'equipo' | 'sprints' | 'evidencia' | 'ciclo'
+  | 'backlog' | 'impedimentos' | 'desarrollo' | 'roles'
+  | 'planning' | 'daily' | 'review' | 'eventos'
+  | 'proyecto' | 'guia' | 'triangulo' | 'conceptos'
+  | 'predictivo' | 'hibrido' | 'control' | 'procesos'
+  | 'acta' | 'edt' | 'interesados' | 'documentos';
+
 interface RetoBase {
+  /** Escena visual que acompaña la pregunta. */
+  ilustracion: ClaveIlustracion;
   pregunta: string;
   explicacion: string;
 }

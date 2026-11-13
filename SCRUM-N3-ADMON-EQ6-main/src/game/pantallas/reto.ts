@@ -2,6 +2,7 @@ import type { Reto, RetoOrdenar, RetoRelacionar } from '@/data/tipos';
 import { px } from '@/lib/assets';
 import { escenarioActual, guiaDelReto, type Partida } from '@/game/estado';
 import { esc, retosJugables } from '@/game/util';
+import { ilustracionReto } from '@/game/ilustraciones';
 import { marcador } from '@/game/pantallas/marcador';
 
 /** Segundos para responder según el tipo de reto. */
@@ -67,8 +68,9 @@ export const reto = (p: Partida): string => {
   const retos = retosJugables(e);
   return (
     marcador(p) +
-    `<div class="scn bajo pxb"><img class="px fondo" src="${px(e.fondo)}" alt=""><img class="px" src="${px(guiaDelReto(p.ruta, p.escenario, p.reto))}" alt="">` +
-    `<span class="pixel tag">${ETIQUETA[retos[p.reto]!.tipo]}</span></div>` +
+    `<div class="escenario-reto" style="--escenario:url('${px(e.fondo)}')">` +
+    `<span class="pixel visual-etiqueta">${ETIQUETA[retos[p.reto]!.tipo]}</span>` +
+    ilustracionReto(retos[p.reto]!, guiaDelReto(p.ruta, p.escenario, p.reto)) + `</div>` +
     `<p class="tema">${esc(e.tema)}, reto ${p.reto + 1} de ${retos.length}</p>` +
     `<div class="tm pixel">Time<div><b data-tiempo></b></div></div>` +
     `<h2 class="pixel preg">${esc(retos[p.reto]!.pregunta)}</h2>` +
