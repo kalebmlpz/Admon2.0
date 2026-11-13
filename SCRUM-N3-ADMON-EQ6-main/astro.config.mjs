@@ -4,8 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://datadave-dev.github.io',
-  base: '/SCRUM-N3-ADMON-EQ6',
+  site: 'https://kalebmlpz.github.io',
+  base: '/Admon2.0',
   vite: {
     plugins: [tailwindcss()],
   },

@@ -19,9 +19,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: withastro/action@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
+      - name: Install dependencies and build
+        working-directory: SCRUM-N3-ADMON-EQ6-main
+        run: |
+          corepack pnpm install --frozen-lockfile
+          corepack pnpm test
+          corepack pnpm astro check
+          corepack pnpm build
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: SCRUM-N3-ADMON-EQ6-main/dist
 
   deploy:
     needs: build

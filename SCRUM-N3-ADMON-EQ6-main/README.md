@@ -5,7 +5,7 @@ Juego web educativo para aprender SCRUM. Materia SCRUM N3 - Administración, Equ
 Port a Astro del prototipo de Sprint 1 (`prototype/sprint1-prototipo.html`), por rebanadas
 verticales descritas en `openspec/changes/`.
 
-**Sitio público:** https://datadave-dev.github.io/SCRUM-N3-ADMON-EQ6/
+**Sitio público:** https://kalebmlpz.github.io/Admon2.0/
 
 ## Requisitos
 
@@ -16,7 +16,7 @@ verticales descritas en `openspec/changes/`.
 
 ```sh
 pnpm install
-pnpm dev                          # http://localhost:4321/SCRUM-N3-ADMON-EQ6/
+pnpm dev                          # http://localhost:4321/Admon2.0/
 pnpm build                        # genera dist/
 pnpm preview                      # sirve dist/ con el base de GitHub Pages
 pnpm astro check                  # tipos de .astro y .ts
@@ -55,5 +55,5 @@ openspec/                     contexto, specs y changes (rebanadas 01-06)
 ## Despliegue
 
 Cada push a `main` ejecuta el workflow de GitHub Actions, que construye el sitio con
-`withastro/action` y lo publica en GitHub Pages (origen "GitHub Actions"). `astro.config.mjs`
-fija `site` y `base` para que los enlaces y las imágenes queden bajo `/SCRUM-N3-ADMON-EQ6/`.
+Node 24 y pnpm con el lockfile y lo publica en GitHub Pages (origen "GitHub Actions"). `astro.config.mjs`
+fija `site` y `base` para que los enlaces y las imágenes queden bajo `/Admon2.0/`.
