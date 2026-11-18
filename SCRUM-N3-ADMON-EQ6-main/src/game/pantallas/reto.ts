@@ -64,7 +64,6 @@ export const reto = (p: Partida): string => {
   const e = escenarioActual(p);
   const retos = retosJugables(e);
   return (
-    `<button class="salir-reto pxb" type="button" data-abrir-menu>← Menú principal</button>` +
     `<dialog class="confirmar-menu" aria-labelledby="titulo-menu" aria-describedby="aviso-menu">
       <h2 id="titulo-menu" class="pixel preg">¿Volver al menú principal?</h2>
       <p id="aviso-menu">Perderás el progreso de esta partida.</p>
@@ -74,7 +73,10 @@ export const reto = (p: Partida): string => {
       </form>
     </dialog>` +
     marcador(p) +
-    `<p class="tema">${esc(e.tema)}, reto ${p.reto + 1} de ${retos.length}</p>` +
+    `<div class="cabecera-reto">
+      <p class="tema">${esc(e.tema)}, reto ${p.reto + 1} de ${retos.length}</p>
+      <button class="salir-reto pxb" type="button" data-abrir-menu>Menú principal</button>
+    </div>` +
     `<div class="tm pixel">Time<div><b data-tiempo></b></div></div>` +
     `<div class="escenario-reto" style="--escenario:url('${px(e.fondo)}')">` +
     ilustracionReto(retos[p.reto]!, guiaDelReto(p.ruta, p.escenario, p.reto)) + `</div>` +
