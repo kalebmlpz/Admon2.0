@@ -2,7 +2,7 @@
 
 Minijuego educativo «Sprint en la vecindad», con rutas Scrum y PMBOK.
 
-**Jugar:** [Sprint en la vecindad](https://kalebmlpz.github.io/Admon2.0/?v=72bc1b1)
+**Jugar:** [Sprint en la vecindad](https://kalebmlpz.github.io/sprint-en-la-vecindad/)
 
 El proyecto Astro está en [`SCRUM-N3-ADMON-EQ6-main/`](SCRUM-N3-ADMON-EQ6-main/README.md).
 
