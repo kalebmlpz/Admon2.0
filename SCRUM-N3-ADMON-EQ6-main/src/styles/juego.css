@@ -279,7 +279,7 @@ main#app { max-width: 560px; gap: 22px; }
 #silencio ~ main { padding-top: 68px; }
 
 /* Ejemplo visible antes de la pregunta. */
-.escenario-reto { padding: 8px; background: linear-gradient(#0a0a0d33, #0a0a0d66), var(--escenario) center/cover; border: 4px solid var(--borde); image-rendering: pixelated; }
+.escenario-reto { padding: 20px 8px; background: linear-gradient(#0a0a0d33, #0a0a0d66), var(--escenario) center/cover; border: 4px solid var(--borde); image-rendering: pixelated; }
 .reto-visual { margin: 0; }
 .reto-visual figcaption { margin-bottom: 6px; padding: 5px; background: #0a0a0df0; color: var(--borde); text-align: center; font-size: 22px; line-height: 1.05; }
 .escena-ejemplo { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 5fr) minmax(0, .65fr); align-items: end; gap: 3px; }
