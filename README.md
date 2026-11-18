@@ -1,8 +1,8 @@
 # Admon2.0
 
-Minijuego educativo «Sprint en la escuela», con rutas Scrum y PMBOK.
+Minijuego educativo «Sprint en la vecindad», con rutas Scrum y PMBOK.
 
-**Jugar:** https://kalebmlpz.github.io/Admon2.0/
+**Jugar:** [Sprint en la vecindad](https://kalebmlpz.github.io/Admon2.0/?v=72bc1b1)
 
 El proyecto Astro está en [`SCRUM-N3-ADMON-EQ6-main/`](SCRUM-N3-ADMON-EQ6-main/README.md).
 
