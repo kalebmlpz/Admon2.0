@@ -11,9 +11,6 @@ export const SEGUNDOS_POR_TIPO: Record<Reto['tipo'], number> = { mc: 25, ord: 45
 /** Letra de cada opción de opción múltiple según su posición. */
 const LETRAS = 'ABC';
 
-/** Etiqueta del tipo de reto sobre la escena. */
-const ETIQUETA: Record<Reto['tipo'], string> = { mc: 'Elige', ord: 'Ordenar', rel: 'Relacionar' };
-
 /** Color de cada par en relacionar, por índice de concepto. */
 const COLORES_PAR = ['var(--yel)', 'var(--pink)', 'var(--blue)'];
 
@@ -68,11 +65,10 @@ export const reto = (p: Partida): string => {
   const retos = retosJugables(e);
   return (
     marcador(p) +
-    `<div class="escenario-reto" style="--escenario:url('${px(e.fondo)}')">` +
-    `<span class="pixel visual-etiqueta">${ETIQUETA[retos[p.reto]!.tipo]}</span>` +
-    ilustracionReto(retos[p.reto]!, guiaDelReto(p.ruta, p.escenario, p.reto)) + `</div>` +
     `<p class="tema">${esc(e.tema)}, reto ${p.reto + 1} de ${retos.length}</p>` +
     `<div class="tm pixel">Time<div><b data-tiempo></b></div></div>` +
+    `<div class="escenario-reto" style="--escenario:url('${px(e.fondo)}')">` +
+    ilustracionReto(retos[p.reto]!, guiaDelReto(p.ruta, p.escenario, p.reto)) + `</div>` +
     `<h2 class="pixel preg">${esc(retos[p.reto]!.pregunta)}</h2>` +
     `<div data-cuerpo>${cuerpoReto(p)}</div>`
   );
