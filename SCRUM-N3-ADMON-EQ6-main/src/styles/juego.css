@@ -167,6 +167,14 @@ main#app { max-width: 560px; gap: 22px; }
 .abierto .info small { color: var(--yel); }
 
 /* Barra de tiempo segmentada */
+/* Salida del reto y confirmación de pérdida de progreso. */
+.salir-reto { width: fit-content; padding: 8px 12px; background: var(--panel, #141419); color: var(--borde); font: inherit; line-height: 1.1; text-decoration: none; cursor: pointer; }
+.salir-reto:is(:hover, :focus-visible) { color: var(--yel); }
+.confirmar-menu { box-sizing: border-box; width: min(440px, calc(100% - 32px)); margin: auto; padding: 20px; border: 3px solid var(--borde); background: #141419; color: var(--borde); font: inherit; }
+.confirmar-menu::backdrop { background: #000b; }
+.confirmar-menu p { margin: 10px 0 16px; }
+.opciones-menu { display: flex; flex-wrap: wrap; gap: 12px; }
+
 .tm { display: flex; align-items: center; gap: 10px; font-size: 9px; color: var(--yel); }
 .tm div { flex: 1; padding: 3px; background: #000; box-shadow: 0 0 0 3px var(--borde); }
 .tm b { display: block; width: 100%; height: 12px; background: repeating-linear-gradient(90deg, var(--yel) 0 14px, transparent 14px 17px); }

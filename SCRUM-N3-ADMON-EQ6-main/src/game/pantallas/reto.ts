@@ -1,5 +1,5 @@
 import type { Reto, RetoOrdenar, RetoRelacionar } from '@/data/tipos';
-import { px } from '@/lib/assets';
+import { px, ruta } from '@/lib/assets';
 import { escenarioActual, guiaDelReto, type Partida } from '@/game/estado';
 import { esc, retosJugables } from '@/game/util';
 import { ilustracionReto } from '@/game/ilustraciones';
@@ -64,6 +64,15 @@ export const reto = (p: Partida): string => {
   const e = escenarioActual(p);
   const retos = retosJugables(e);
   return (
+    `<button class="salir-reto pxb" type="button" data-abrir-menu>← Menú principal</button>` +
+    `<dialog class="confirmar-menu" aria-labelledby="titulo-menu" aria-describedby="aviso-menu">
+      <h2 id="titulo-menu" class="pixel preg">¿Volver al menú principal?</h2>
+      <p id="aviso-menu">Perderás el progreso de esta partida.</p>
+      <form class="opciones-menu" method="dialog">
+        <button class="salir-reto pxb" autofocus>Seguir jugando</button>
+        <a class="salir-reto pxb" href="${ruta('/')}">Salir al menú</a>
+      </form>
+    </dialog>` +
     marcador(p) +
     `<p class="tema">${esc(e.tema)}, reto ${p.reto + 1} de ${retos.length}</p>` +
     `<div class="tm pixel">Time<div><b data-tiempo></b></div></div>` +

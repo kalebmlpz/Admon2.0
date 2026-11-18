@@ -114,16 +114,44 @@ let partida = nuevaPartida();
 
 function pintar(): void {
   montar(PANTALLAS[partida.pantalla](partida));
-  if (partida.pantalla === 'reto') iniciarTiempo();
+  if (partida.pantalla === 'reto') {
+    prepararMenu();
+    iniciarTiempo();
+  }
 }
 
-/** La barra se vacía en `SEGUNDOS_POR_TIPO`; `montar()` la detiene al cambiar de pantalla. */
+/** Conserva el plazo y la bonificación por rapidez al continuar después de una pausa. */
+function prepararMenu(): void {
+  const boton = document.querySelector<HTMLButtonElement>('[data-abrir-menu]')!;
+  const dialogo = document.querySelector<HTMLDialogElement>('.confirmar-menu')!;
+  let inicioPausa: number;
+
+  boton.addEventListener('click', () => {
+    inicioPausa = Date.now();
+    temporizador.detener();
+    dialogo.showModal();
+  });
+
+  dialogo.addEventListener('close', () => {
+    partida = { ...partida, inicioReto: partida.inicioReto + Date.now() - inicioPausa };
+    iniciarTiempo();
+  });
+}
+
+/** La barra refleja el tiempo jugado y se detiene al cambiar de pantalla. */
 function iniciarTiempo(): void {
   const barra = document.querySelector<HTMLElement>('[data-tiempo]')!;
   const r = retosJugables(escenarioActual(partida))[partida.reto]!;
+  const total = SEGUNDOS_POR_TIPO[r.tipo];
+  const restante = Math.max(0, total - (Date.now() - partida.inicioReto) / 1000);
+  barra.style.width = `${restante / total * 100}%`;
+  if (restante === 0) {
+    despachar('tiempo');
+    return;
+  }
   temporizador.iniciar(
-    SEGUNDOS_POR_TIPO[r.tipo],
-    (restante) => (barra.style.width = `${restante * 100}%`),
+    restante,
+    (fraccion) => (barra.style.width = `${fraccion * restante / total * 100}%`),
     () => despachar('tiempo'),
   );
 }
